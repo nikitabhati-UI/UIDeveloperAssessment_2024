@@ -1,0 +1,279 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+html, body{
+  padding: 10px 50px;
+}
+h2{
+  margin: 30px 0px;
+  border-bottom: 1px solid #3498db;
+  background: #bee5ff;
+  text-transform: uppercase;
+  padding: 10px;
+}
+/* Que 1 */
+.tag {
+  padding-right: 5px;
+  padding-left: 5px;
+  border: solid;
+}
+
+.tag-regular {
+  border-radius: 20px;
+}
+
+.tag-high {
+  background: Tomato;
+}
+
+.tag-mid {
+  background: Yellow;
+}
+
+.tag-low {
+  background: LimeGreen;
+}
+
+
+/* Que 2 */
+
+.menu-body {
+  background-color: DodgerBlue;
+  display: inline-block;
+  border: 2px solid black;
+  color: black;
+}
+
+/* Update only the CSS styles of .menu-item */
+.menu-item {
+  background-color: LightGray;
+  display: block;
+  /* Change for que 2 */
+  margin: 10px 0;
+  padding:0  10px;
+  border: 2px solid black;
+}
+
+
+/* Que 3 */
+
+.para-1::-moz-selection { 
+  color: #c10606;
+  background: #e5e530;
+}
+
+.para-1::selection {
+  color: #c10606;
+  background: #e5e530;
+}
+.para-2::-moz-selection { 
+  color: #585858;
+  background: #9fdd86;
+}
+
+.para-2::selection {
+  color: #585858;
+  background: #9fdd86;
+}
+
+
+/* que 4 */
+
+.gallery-container{
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap:10px;
+}
+.gallery-container figure{
+  border:1px solid #ccc; 
+}
+.gallery-container img{
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* que 5 */
+.list-group .list-item{
+  cursor: pointer;
+  list-style: none;
+}
+.list-group .list-item:hover, .list-group .list-item:active{
+  background: #eee;
+  color: #c10606;  
+}
+
+
+/* que 6 */
+
+.accordion-item{
+  margin-bottom: 10px;
+}
+.accordion-input {
+  display: none;
+}
+
+.accordion-title {
+  display: block;    
+  padding: 10px;
+  cursor: pointer;
+  background: #3498db;
+    color: #FFF;
+  transition: ease .5s;
+}
+.accordion-title::before{
+  content: '+';
+  margin-right: 10px;
+}
+
+.accordion-content {
+  background: #fff;
+  color: #333;
+  padding: 10px 25px;
+  border: 1px solid #3498db;
+}
+.accordion-input + .accordion-title + .accordion-content {
+  display: none;
+}
+
+.accordion-input:checked + .accordion-title + .accordion-content {
+  display: block;
+}
+.accordion-input:checked + .accordion-title::before{
+  content: "-";
+}
+
+/* que 7 */
+.order-list{
+  padding-left: 30px;
+  
+}
+
+/* que 8 */
+.list-group-8 .list-item{
+padding: 10px;
+background: #b9b9b9;
+transition: all .5s;
+list-style: none;
+}
+.list-group-8 .list-item:nth-child(2n){
+  background: #bee5ff;
+}
+.list-group-8 .list-item:nth-child(3n){
+  background: #3498db;
+}
+ .list-group-8 .list-item:hover{
+  background: #d3ffe5;
+ }
+
+/* que 9 */
+.radio-item label{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
+.radio-item input[type='radio']{
+  visibility: hidden;
+}
+.radio-item label::before{
+  content: "";
+  border:1px solid #ccc;
+  width: 20px;
+  height: 20px;
+  display: block;
+  border-radius:50%;
+  transition: all 1s;
+}
+.radio-item  input[type='radio']:checked + label::before{
+border: 2px #fff solid;
+position: relative;
+background: #ff0000;
+box-shadow: 0px 0px 0px 2px #ff0000;
+box-sizing: border-box;
+}
+
+/* que10 */
+input[type="number"]:invalid{
+  border:1px solid red;
+}
+
+
+
+/* que 11 */
+ .company_epm{
+  display: flex;
+  flex-direction: column;
+ }
+ .company_epm [company-designation ="Advisor"]{
+order: 3;
+ }
+ .company_epm [company-designation ="Board Director"]{
+order: 4;
+ }
+ .company_epm [company-designation ="Board Observer"]{
+order: 5;
+ }
+ .company_epm [company-designation ="Director"]{
+order: 2;
+ }
+ .company_epm [company-name ="Kris Nair"]{
+order: 1;
+ }
+ 
+
+ /* que 12 */
+
+ .notification-btns{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px;
+}
+.notification-btn{
+  display: block;
+  padding-block: 15px;
+  padding-inline: 30px;
+  background: #ccc;
+  position: relative;
+}
+[notification-count]::after{
+  content:attr(notification-count);
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  background: #bfb321;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+/* que 13 */
+
+.grid-4{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:10px;
+  margin-bottom:10px;
+  padding:20px;
+  background:#ddd;
+}
+.grid-4 div{
+  background:#ccc;
+  padding:20px;
+}
+
+.grid-4 div:empty{
+  display: none;
+}
+
+.grid-4:has(div:empty){
+  background: #333;
+  grid-template-columns:  repeat(
+    auto-fit, minmax(200px, 1fr));
+}
